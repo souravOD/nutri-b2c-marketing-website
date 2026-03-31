@@ -10,6 +10,32 @@
   --font-sans: var(--font-sans);
   --font-mono: var(--font-geist-mono);
   --font-heading: var(--font-sans);
+
+  /* Nutri Marketing Brand Colors */
+  --color-nutri-green: #99cc33;
+  --color-nutri-green-dark: #538100;
+  --color-nutri-green-deep: #416601;
+  --color-nutri-green-forest: #416600;
+  --color-nutri-green-lime: #bdf371;
+  --color-nutri-green-lime-light: #bef458;
+  --color-nutri-green-pale: #dff1cc;
+  --color-nutri-green-muted: #7c8e57;
+  --color-nutri-green-border: #dee4d3;
+  --color-nutri-green-border-light: #c3c9b4;
+
+  --color-nutri-dark: #1a2b2b;
+  --color-nutri-dark-text: #1b1c19;
+  --color-nutri-dark-card: #161910;
+  --color-nutri-dark-body: #434939;
+  --color-nutri-dark-footer: #12212d;
+
+  --color-nutri-warm-bg: #fbf9f4;
+  --color-nutri-warm-bg-alt: #faf8f3;
+  --color-nutri-warm-card: #f5f3ee;
+  --color-nutri-warm-card-alt: #f0eee9;
+  --color-nutri-light-bg: #fcfdfa;
+
+  /* shadcn defaults */
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -83,48 +109,34 @@
   --sidebar-ring: oklch(0.708 0 0);
 }
 
-.dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
-}
-
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-nutri-warm-bg text-nutri-dark-text;
   }
   html {
-    @apply font-sans;
+    @apply font-sans scroll-smooth;
   }
+}
+
+/* Scroll reveal animation */
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  opacity: 0;
+}
+
+.reveal.revealed {
+  animation: reveal-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
