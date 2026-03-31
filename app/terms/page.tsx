@@ -20,8 +20,8 @@ export default function TermsPage() {
       badge="Legal Documentation"
       title="Terms of Service"
       subtitle={
-        <span>
-          Odyssey Nutrition Platform{" "}
+        <span className="flex flex-col items-center gap-1">
+          <span>Odyssey Nutrition Platform</span>
           <span className="font-bold text-nutri-green-forest">
             Last updated: March 29, 2026
           </span>
@@ -43,7 +43,7 @@ export default function TermsPage() {
       </LegalSection>
 
       {/* 3 */}
-      <div className="bg-nutri-warm-card rounded-none -mx-20 px-20 py-10">
+      <div className="bg-nutri-warm-card rounded-none -mx-6 px-6 lg:-mx-20 lg:px-20 py-8 lg:py-10">
         <LegalSection title="3. The Odyssey Service">
           <LegalCallout title="Important — Not Medical Advice" variant="info">
             The content provided through Odyssey Nutrition is for informational purposes only. We are not medical professionals, and our suggestions should not be used as a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician.
@@ -121,34 +121,34 @@ export default function TermsPage() {
       </LegalSection>
 
       {/* 10 — Dark card */}
-      <div className="bg-nutri-dark-text rounded-[32px] p-20 -mx-0 text-white">
-        <h2 className="font-extrabold text-nutri-green-lime text-[32px] leading-tight mb-6">
+      <div className="bg-nutri-dark-text rounded-[24px] lg:rounded-[32px] p-8 lg:p-20 -mx-0 text-white">
+        <h2 className="font-extrabold text-nutri-green-lime text-[22px] lg:text-[32px] leading-tight mb-4 lg:mb-6">
           10. Limitation of Liability
         </h2>
 
-        <div className="border-b border-white/10 pb-8 mb-8">
-          <p className="font-bold text-nutri-green-lime-light text-base mb-4">
+        <div className="border-b border-white/10 pb-6 lg:pb-8 mb-6 lg:mb-8">
+          <p className="font-bold text-nutri-green-lime-light text-sm lg:text-base mb-3 lg:mb-4">
             Allergen Disclaimer
           </p>
-          <p className="text-gray-300 text-sm leading-relaxed">
+          <p className="text-gray-300 text-xs lg:text-sm leading-relaxed">
             Odyssey Nutrition tracks common allergens but cannot guarantee the accuracy of third-party ingredient data. Users with severe allergies must independently verify all food ingredients before consumption.
           </p>
         </div>
 
         <LegalParagraph>
-          <span className="text-white">
+          <span className="text-white text-xs lg:text-sm">
             To the maximum extent permitted by law, Odyssey Nutrition shall not be liable for:
           </span>
         </LegalParagraph>
-        <ul className="flex flex-col gap-3 mt-4">
+        <ul className="flex flex-col gap-2 lg:gap-3 mt-3 lg:mt-4">
           {[
             "Any indirect, incidental, special, or consequential damages.",
             "Loss of profits, data, use, goodwill, or other intangible losses.",
             "Adverse health reactions resulting from the use of our meal plans.",
           ].map((item, i) => (
-            <li key={i} className="flex items-start gap-3 text-base">
+            <li key={i} className="flex items-start gap-2.5 lg:gap-3 text-sm lg:text-base">
               <span className="text-nutri-green-dark font-bold mt-0.5">•</span>
-              <span className="text-gray-300">{item}</span>
+              <span className="text-gray-300 text-xs lg:text-sm">{item}</span>
             </li>
           ))}
         </ul>
@@ -193,7 +193,7 @@ export default function TermsPage() {
       </LegalSection>
 
       {/* 15 */}
-      <div className="border-t border-nutri-warm-card-alt pt-10">
+      <div className="border-t border-nutri-warm-card-alt pt-8 lg:pt-10">
         <LegalSection title="15. Contact">
           <LegalParagraph>
             If you have any questions about these Terms, please contact us at:

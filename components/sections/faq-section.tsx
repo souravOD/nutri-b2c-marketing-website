@@ -37,28 +37,28 @@ const faqItems = [
 
 export function FAQSection() {
   return (
-    <section className="bg-[#f7f8f6] py-24">
-      <div className="max-w-[800px] mx-auto px-8">
-        <div className="flex flex-col gap-16">
+    <section className="bg-[#f7f8f6] py-16 lg:py-24">
+      <div className="max-w-[800px] mx-auto px-6 lg:px-8">
+        <div className="flex flex-col gap-10 lg:gap-16">
           {/* Heading */}
           <div className="flex flex-col items-center">
-            <h2 className="font-black text-[#161910] text-[36px] leading-[40px] text-center">
+            <h2 className="font-black text-[#161910] text-[28px] lg:text-[36px] leading-[32px] lg:leading-[40px] text-center">
               Frequently Asked Questions
             </h2>
           </div>
 
           {/* Accordion */}
-          <Accordion className="flex flex-col gap-4">
+          <Accordion className="flex flex-col gap-3 lg:gap-4">
             {faqItems.map((item, i) => (
               <AccordionItem
                 key={i}
                 value={`faq-${i}`}
-                className="bg-white rounded-[32px] border border-[#dee4d3] px-6 py-0 data-[state=open]:shadow-md transition-shadow"
+                className="bg-white rounded-[24px] lg:rounded-[32px] border border-[#dee4d3] px-5 lg:px-6 py-0 data-[state=open]:shadow-md transition-shadow"
               >
-                <AccordionTrigger className="text-left text-[#161910] text-[16px] font-bold hover:no-underline py-6">
+                <AccordionTrigger className="text-left text-[#161910] text-sm lg:text-[16px] font-bold hover:no-underline py-5 lg:py-6">
                   {item.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-[#7c8e57] text-[16px] leading-relaxed pb-6">
+                <AccordionContent className="text-[#7c8e57] text-sm lg:text-[16px] leading-relaxed pb-5 lg:pb-6">
                   {item.answer}
                 </AccordionContent>
               </AccordionItem>
