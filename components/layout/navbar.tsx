@@ -59,8 +59,7 @@ export function Navbar() {
             ))}
             <div className="ml-8">
               <Link
-                href="/#cta"
-                onClick={(e) => handleAnchorClick(e, "/#cta")}
+                href="/get-started"
                 className={cn(
                   "inline-flex items-center justify-center rounded-full px-6 py-2.5",
                   "bg-nutri-green-dark text-white font-bold text-base",
@@ -116,8 +115,7 @@ export function Navbar() {
             ))}
             <div className="mt-3 px-4">
               <Link
-                href="/#cta"
-                onClick={(e) => handleAnchorClick(e, "/#cta")}
+                href="/get-started"
                 className={cn(
                   "inline-flex items-center justify-center rounded-full w-full px-6 py-3",
                   "bg-nutri-green-dark text-white font-bold text-base",

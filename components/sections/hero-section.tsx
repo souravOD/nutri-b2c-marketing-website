@@ -37,7 +37,7 @@ export function HeroSection() {
             {/* CTA Buttons */}
             <div className="flex flex-col lg:flex-row items-center gap-4 lg:gap-6 pt-2 w-full lg:w-auto">
               <Link
-                href="/#cta"
+                href="/get-started"
                 className={cn(
                   "inline-flex items-center justify-center rounded-full w-full lg:w-auto px-10 py-4 lg:py-5",
                   "bg-[#9c3] text-[#0f172a] font-black text-base lg:text-[20px]",

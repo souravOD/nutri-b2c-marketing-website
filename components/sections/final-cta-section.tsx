@@ -26,7 +26,7 @@ export function FinalCTASection() {
         {/* CTA Button */}
         <div className="pt-4 w-full">
           <Link
-            href="#"
+            href="/get-started"
             className={cn(
               "flex items-center justify-center gap-3 rounded-[20px] lg:rounded-[24px] py-4 lg:py-5 w-full",
               "bg-[#1a3c34] text-white font-black text-base lg:text-[18px]",
