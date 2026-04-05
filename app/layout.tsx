@@ -24,6 +24,29 @@ export const metadata: Metadata = {
     "grocery list",
     "allergy tracking",
   ],
+  openGraph: {
+    title: "Nutri — The Family Nutrition App",
+    description: "The only nutrition app your family will actually use. Smart meal planning, allergy tracking, and automatic grocery lists for families.",
+    url: "https://nutri.app",
+    siteName: "Nutri",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Nutri — Family Nutrition App",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Nutri — The Family Nutrition App",
+    description: "The only nutrition app your family will actually use. Smart meal planning, allergy tracking, and automatic grocery lists for families.",
+    images: ["/og-image.png"],
+    creator: "@nutriapp",
+  },
 };
 
 export default function RootLayout({
