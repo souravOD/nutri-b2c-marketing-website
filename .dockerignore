@@ -1,0 +1,43 @@
+# ── Dependencies (rebuilt inside container) ──
+node_modules
+.pnp
+.pnp.*
+.yarn
+
+# ── Build artifacts ──
+.next
+out
+build
+dist
+
+# ── Git ──
+.git
+.gitignore
+
+# ── Environment / Secrets (injected via Coolify) ──
+.env*
+.env.local
+.env.production
+.env.development
+
+# ── IDE / Editor ──
+.vscode
+.idea
+*.swp
+*.swo
+
+# ── OS ──
+.DS_Store
+Thumbs.db
+
+# ── Docs & non-runtime files ──
+README.md
+AGENTS.md
+CLAUDE.md
+migrations
+*.md
+
+# ── Docker (prevent recursive context) ──
+Dockerfile
+docker-compose*
+.dockerignore
