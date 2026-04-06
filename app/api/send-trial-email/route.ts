@@ -1,18 +1,19 @@
 // app/api/send-trial-email/route.ts
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
-import { supabaseAdmin } from "@/lib/supabase-server";
+import { getSupabaseAdmin } from "@/lib/supabase-server";
 import { generateTrialEmailHtml } from "@/lib/email-template";
-
-const resend = new Resend(process.env.RESEND_API_KEY);
-const fromEmail = process.env.RESEND_FROM_EMAIL || "onboarding@resend.dev";
-const b2cAppUrl = process.env.NEXT_PUBLIC_B2C_APP_URL || "http://localhost:3000";
 
 // Rate limit: max 5 resends, 60s cooldown
 const MAX_RESENDS = 5;
 const COOLDOWN_MS = 60_000;
 
 export async function POST(req: NextRequest) {
+  const supabaseAdmin = getSupabaseAdmin();
+  const resend = new Resend(process.env.RESEND_API_KEY);
+  const fromEmail = process.env.RESEND_FROM_EMAIL || "onboarding@resend.dev";
+  const b2cAppUrl = process.env.NEXT_PUBLIC_B2C_APP_URL || "http://localhost:3000";
+
   try {
     const body = await req.json();
     const { firstName, lastName, email, forceResend, userTimezone } = body;
