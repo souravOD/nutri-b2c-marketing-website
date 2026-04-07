@@ -141,10 +141,16 @@ export function HeroSection() {
               </div>
             </div>
 
-            {/* Floating "Allergen-free certified" badge */}
-            <div className="relative lg:absolute mt-4 lg:mt-0 lg:-bottom-4 lg:right-8 bg-white rounded-2xl px-5 lg:px-6 py-3 lg:py-4 flex items-center justify-center lg:justify-start gap-3 shadow-[0px_20px_25px_-5px_rgba(0,0,0,0.1),0px_8px_10px_-6px_rgba(0,0,0,0.1)] border border-[rgba(83,129,0,0.05)] mx-auto lg:mx-0 w-fit">
-              <span className="size-3 rounded-full bg-[#9c3]" />
-              <span className="text-[#1a3c34] font-bold text-[13px] lg:text-[14px]">Allergen-free certified ✓</span>
+            {/* Floating Badges */}
+            <div className="flex flex-col lg:flex-row gap-3 mt-4 lg:mt-0 lg:absolute lg:-bottom-4 lg:right-8 mx-auto lg:mx-0 w-fit">
+              <div className="bg-white rounded-2xl px-5 lg:px-6 py-3 lg:py-4 flex items-center justify-center lg:justify-start gap-3 shadow-[0px_20px_25px_-5px_rgba(0,0,0,0.1),0px_8px_10px_-6px_rgba(0,0,0,0.1)] border border-[rgba(83,129,0,0.05)]">
+                <span className="size-3 rounded-full bg-[#9c3]" />
+                <span className="text-[#1a3c34] font-bold text-[13px] lg:text-[14px]">Allergen-free certified ✓</span>
+              </div>
+              <div className="bg-white rounded-2xl px-5 lg:px-6 py-3 lg:py-4 flex items-center justify-center lg:justify-start gap-3 shadow-[0px_20px_25px_-5px_rgba(0,0,0,0.1),0px_8px_10px_-6px_rgba(0,0,0,0.1)] border border-[rgba(83,129,0,0.05)]">
+                <span className="size-3 rounded-full bg-[#60a5fa]" />
+                <span className="text-[#1a3c34] font-bold text-[13px] lg:text-[14px]">HIPAA Compliant ✓</span>
+              </div>
             </div>
           </div>
         </div>

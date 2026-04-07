@@ -2,9 +2,7 @@
 
 import { HeroSection } from "@/components/sections/hero-section";
 import { ProblemSection } from "@/components/sections/problem-section";
-import { FeatureScanner } from "@/components/sections/feature-scanner";
-import { FeatureAIPlanner } from "@/components/sections/feature-ai-planner";
-import { FeatureGroceryList } from "@/components/sections/feature-grocery-list";
+import { FeaturesBentoGrid } from "@/components/sections/features-bento-grid";
 import { FamilyProfilesSection } from "@/components/sections/family-profiles-section";
 import { ComparisonTable } from "@/components/sections/comparison-table";
 import { TestimonialsSection } from "@/components/sections/testimonials-section";
@@ -22,13 +20,7 @@ export default function LandingPage() {
         <ProblemSection />
       </div>
       <div className="reveal">
-        <FeatureScanner />
-      </div>
-      <div className="reveal">
-        <FeatureAIPlanner />
-      </div>
-      <div className="reveal">
-        <FeatureGroceryList />
+        <FeaturesBentoGrid />
       </div>
       <div className="reveal">
         <FamilyProfilesSection />
