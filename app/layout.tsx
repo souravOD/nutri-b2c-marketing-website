@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Nutri — The Family Nutrition App",
     description: "The only nutrition app your family will actually use. Smart meal planning, allergy tracking, and automatic grocery lists for families.",
-    url: "https://nutri.app",
+    url: "https://nutrismarts.ai",
     siteName: "Nutri",
     images: [
       {
